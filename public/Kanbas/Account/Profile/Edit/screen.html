@@ -2,6 +2,19 @@
 <html lang="en">
   <head>
     <title>Account Profile Edit Screen</title>
+    <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Status/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Dashboard/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
   </head>
   <body>
     <table>
@@ -9,23 +22,26 @@
             <tr>
                 <!--{first column}-->
                 <td valign="top">
-                    <ul>
-                        <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                        <li><a href="#">Dashboard</a></li>
-                        <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                        <li><a href="#">Calendar</a></li>
-                        <li><a href="#">Inbox</a></li>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Studio</a></li>
-                        <li><a href="#">Commons</a></li>
-                        <li><a href="#">Help</a></li>
-                    </ul>
+                    <div class="container wd-kanbas-sidebar">
+                        <ul class="wd-kanbas-navigation">
+                          <li><a href="#"><img class="neu_logo" src="/images/neu_logo.png"></a></li>
+                          <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html"><div><i class="fa fa-user default_padding"></i></br>Account</div></a></li>
+                          <li><a href="/Kanbas/Dashboard/screen.html"><i class="fa fa-tachometer default_padding"></i></br>Dashboard</a></li>
+                          <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fa fa-book default_padding"></i></br>Courses</a></li>
+                          <li><a href="#"><i class="fa fa-calendar default_padding"></i></br>Calendar</a></li>
+                          <li><a href="#"><i class="fa fa-inbox default_padding"></i></br>Inbox</a></li>
+                          <li><a href="#"><i class="fa fa-clock-o default_padding"></i></br>History</a></li>
+                          <li><a href="#"><i class="fa fa-tv default_padding"></i></br>Studio</a></li>
+                          <li><a href="#"><i class="fa fa-cloud default_padding"></i></br>Commons</a></li>
+                          <li><a href="#"><i class="fa fa-question-circle default_padding"></i></br>Help</a></li>
+                        </ul>
+                        </div>
                 </td>
                 <!--{second column}-->
                 <td valign="top">
-                    <ul>
+                    <ul class="wd-navigation">
                         <li><a href="#">Notifications</a></li>
-                        <li><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                        <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
                         <li><a href="#">Files</a></li>
                         <li><a href="#">Settings</a></li>
                         <li><a href="#">ePortolios</a></li>

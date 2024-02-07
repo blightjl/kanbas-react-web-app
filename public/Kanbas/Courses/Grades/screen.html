@@ -1,149 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Grades Screen</title>
-  </head>
-  <body>
-    <table width="100%">
-      <tbody>
-        <tr>
-          <!-- {first column}-->
-          <td valign="top">
-            <ul>
-              <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-              <li><a href="#">Calendar</a></li>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Studio</a></li>
-              <li><a href="#">Commons</a></li>
-              <li><a href="#">Help</a></li>
+
+<head>
+  <title>Grades Screen</title>
+  <link rel="stylesheet" href="/Kanbas/styles.css" />
+  <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+  <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <table width="100%">
+    <tbody>
+      <tr>
+        <!-- {first column}-->
+        <td valign="top">
+          <div class="container wd-kanbas-sidebar">
+            <ul class="wd-kanbas-navigation">
+              <li><a href="#"><img class="neu_logo" src="/images/neu_logo.png"></a></li>
+              <li><a href="/Kanbas/Account/Profile/screen.html">
+                  <div><i class="fa fa-user default_padding"></i></br>Account</div>
+                </a></li>
+              <li><a href="/Kanbas/Dashboard/screen.html"><i class="fa fa-tachometer default_padding"></i></br>Dashboard</a></li>
+              <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html"><i class="fa fa-book default_padding"></i></br>Courses</a>
+              </li>
+              <li><a href="#"><i class="fa fa-calendar default_padding"></i></br>Calendar</a></li>
+              <li><a href="#"><i class="fa fa-inbox default_padding"></i></br>Inbox</a></li>
+              <li><a href="#"><i class="fa fa-clock-o default_padding"></i></br>History</a></li>
+              <li><a href="#"><i class="fa fa-tv default_padding"></i></br>Studio</a></li>
+              <li><a href="#"><i class="fa fa-cloud default_padding"></i></br>Commons</a></li>
+              <li><a href="#"><i class="fa fa-question-circle default_padding"></i></br>Help</a></li>
+            </ul>
+          </div>
+        </td>
+        <!-- {second column}-->
+        <td valign="top">
+          <ul class="wd-navigation">
+            <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+            <li><a href="#">Modules</a></li>
+            <li><a href="#">Piazza</a></li>
+            <li><a href="#">Zoom Meetings</a></li>
+            <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+            <li><a href="#">Quizzes</a></li>
+            <li class="wd-active"><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+            <li><a href="#">People</a></li>
+            <li><a href="#">Panopto Video</a></li>
+            <li><a href="#">Discussions</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Pages</a></li>
+            <li><a href="#">Files</a></li>
+            <li><a href="#">Rubrics</a></li>
+            <li><a href="#">Outcomes</a></li>
+            <li><a href="#">Collaborations</a></li>
+            <li><a href="#">Syllabus</a></li>
+            <li><a href="#">Settings</a></li>
           </ul>
-          </td>
-          <!-- {second column}-->
-          <td valign="top">
-            <ul>
-              <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-              <li><a href="#">Modules</a></li>
-              <li><a href="#">Piazza</a></li>
-              <li><a href="#">Zoom Meetings</a></li>
-              <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-              <li><a href="#">Quizzes</a></li>
-              <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-              <li><a href="#">People</a></li>
-              <li><a href="#">Panopto Video</a></li>
-              <li><a href="#">Discussions</a></li>
-              <li><a href="#">Announcements</a></li>
-              <li><a href="#">Pages</a></li>
-              <li><a href="#">Files</a></li>
-              <li><a href="#">Rubrics</a></li>
-              <li><a href="#">Outcomes</a></li>
-              <li><a href="#">Collaborations</a></li>
-              <li><a href="#">Syllabus</a></li>
-              <li><a href="#">Settings</a></li>
-          </ul>
-          </td>
-          <!-- {third column}-->
-          <td valign="top">
-            <table>
-              <tbody>
-                <td>
-                  <select>
-                    <option>Gradebook</option>
-                    <option>Single Gradebook</option>
-                    <option>Retired Gradebook</option>
+        </td>
+        <!-- {third column}-->
+        <td valign="top">
+          <table>
+            <tbody>
+              <td>
+                <select>
+                  <option>Gradebook</option>
+                  <option>Single Gradebook</option>
+                  <option>Retired Gradebook</option>
                 </select>
                 <button>Import</button>
                 <select>
-                    <option>Export</option>
-                    <option>Export Single</option>
-                    <option>Export All</option>
+                  <option>Export</option>
+                  <option>Export Single</option>
+                  <option>Export All</option>
                 </select>
                 <button>Configure</button>
-                <br/><br/>
-                  <label><strong>Student Names</strong></label><br/><br/>
-                  <input placeholder="Search Students"/>
-                  <br/><br/>
-                  <label><strong>Assignment Names</strong></label><br/>
-                  <br/>
-                  <input placeholder="Search Assignments"/>
-                  <br/><br/>
-                </td>
-                <td>
-                </td>
-              </tbody>
-            </table>
-            <button>Apply Filters</button><br/><br/>
-            <table border="1" width="100%">
-              <thead>
-                <tr>
-                  <th rowspan="2">Student Names</th>
-                  <th>A1<br/>SETUP<br/>Out of 100</th>
-                  <th>A2<br/>HTML<br/>Out of 100</th>
-                  <th>A3<br/>CSS<br/>Out of 100</th>
-                  <th>A4<br/>BOOTSTRAP<br/>Out of 100</th>
-                  <th>A5<br/>JAVASCRIPT<br/>Out of 100</th>
-                  <th>A6<br/>REACT<br/>Out of 100</th>
-                  <th>A7<br/>REDUX<br/>Out of 100</th>
-                  <th>A8<br/>NODE<br/>Out of 100</th>
-                  <th>A9<br/>MONGO<br/>Out of 100</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Kinji Hakari</td>
-                  <td><input type="number" value="0"/></td>
-                  <td><input type="number" value="0"/></td>
-                  <td><input type="number" value="0"/></td>
-                  <td><input type="number" value="0"/></td>
-                  <td><input type="number" value="0"/></td>
-                  <td><input type="number" value="0"/></td>
-                  <td><input type="number" value="0"/></td>
-                  <td><input type="number" value="0"/></td>
-                  <td><input type="number" value="0"/></td>
-                </tr>
-                <tr>
-                  <td>Kento Nanami</td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                </tr>
-                <tr>
-                  <td>Ryomen Sukuna</td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100" /></td>
-                </tr>
-                <tr>
-                  <td>Toji Fushiguro</td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100" /></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                  <td><input type="number" value="100"/></td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </body>
+                <br /><br />
+                <label><strong>Student Names</strong></label><br /><br />
+                <input placeholder="Search Students" />
+                <br /><br />
+                <label><strong>Assignment Names</strong></label><br />
+                <br />
+                <input placeholder="Search Assignments" />
+                <br /><br />
+              </td>
+              <td>
+              </td>
+            </tbody>
+          </table>
+          <button>Apply Filters</button><br /><br />
+          <table border="1" width="100%">
+            <thead>
+              <tr>
+                <th rowspan="2">Student Names</th>
+                <th>A1<br />SETUP<br />Out of 100</th>
+                <th>A2<br />HTML<br />Out of 100</th>
+                <th>A3<br />CSS<br />Out of 100</th>
+                <th>A4<br />BOOTSTRAP<br />Out of 100</th>
+                <th>A5<br />JAVASCRIPT<br />Out of 100</th>
+                <th>A6<br />REACT<br />Out of 100</th>
+                <th>A7<br />REDUX<br />Out of 100</th>
+                <th>A8<br />NODE<br />Out of 100</th>
+                <th>A9<br />MONGO<br />Out of 100</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Kinji Hakari</td>
+                <td><input type="number" value="0" /></td>
+                <td><input type="number" value="0" /></td>
+                <td><input type="number" value="0" /></td>
+                <td><input type="number" value="0" /></td>
+                <td><input type="number" value="0" /></td>
+                <td><input type="number" value="0" /></td>
+                <td><input type="number" value="0" /></td>
+                <td><input type="number" value="0" /></td>
+                <td><input type="number" value="0" /></td>
+              </tr>
+              <tr>
+                <td>Kento Nanami</td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+              </tr>
+              <tr>
+                <td>Ryomen Sukuna</td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+              </tr>
+              <tr>
+                <td>Toji Fushiguro</td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+                <td><input type="number" value="100" /></td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
 </html>

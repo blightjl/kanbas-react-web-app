@@ -1,0 +1,100 @@
+html, body {
+    width: 100%;
+}
+
+.course-status {
+    width: 200px;
+}
+
+.course-status button {
+    font-size: 12px;
+}
+
+.set-1 {
+    padding: 5px;
+}
+
+.button-set {
+    width: 100%;
+}
+
+.grid-button {
+    width: 100%;
+    margin: 3px;
+}
+
+.split-button {
+    width: 47%;
+    margin: 2px;
+}
+
+#published {
+    background-color: lightgreen;
+    color: white;
+}
+
+.fa.fa-check-circle.text-success {
+    border-radius: 8px;
+    padding: 3px;
+}
+
+.fa.fa-stop-circle {
+    border-radius: 8px;
+    padding: 3px;
+}
+
+button.grid-button i.fa {
+    text-align: left;
+    border-radius: 8px;
+    padding: 3px; 
+}
+
+button.grid-button {
+    display: flex;
+    align-items: flex-start;
+}
+
+.set-2.button-set {
+    padding-bottom: 5px;
+}
+
+.assignments {
+    color: red;
+    font-size: 12px;
+    margin-top: 0;
+}
+
+.assignments i.fa {
+    text-align: left;
+    border-radius: 8px;
+    padding: 5px; 
+}
+
+.to-do {
+    padding: 5px;
+    padding-bottom: 13px;
+}
+
+.coming-up {
+    font-size: 12px;
+    padding: 5px;
+    padding-bottom: 13px;
+}
+
+.coming-up span.calendar {
+    color: red;
+}
+
+i.fa.fa-calendar {
+    padding-left: 20px;
+    padding-right: 5px;
+}
+
+div .lecture_set {
+    display: flex;
+    align-items: flex-start;
+}
+
+span .calendar {
+    text-align: left;
+}

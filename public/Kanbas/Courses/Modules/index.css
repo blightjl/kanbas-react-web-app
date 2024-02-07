@@ -1,0 +1,71 @@
+html,
+body {
+    width: 100%;
+}
+
+#module-button {
+    background-color: red;
+}
+
+.btn.btn-primary {
+    background-color: white;
+    color: black;
+    border-color: gray;
+    border-radius: 0;
+    height: auto;
+}
+
+.btn.btn-primary:hover {
+    background-color: gray;
+    color: white;
+    border-color: gray;
+}
+
+.wd-modules,
+.wd-modules * {
+    border-radius: 0%;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wd-modules {
+    margin: 5px;
+}
+
+.wd-modules>li {
+    background-color: lightgray;
+    border: 1px solid gray !important;
+    border-left: none !important;
+}
+
+.wd-modules>li>div {
+    padding: 6px;
+    border-left: 1px solid gray !important;
+}
+
+.wd-modules>li>ul>li {
+    padding: 5px;
+    border-top: 1px solid gray !important;
+    border-left: 2px solid green;
+}
+
+.wd-modules>li {
+    margin-bottom: 20px;
+}
+
+.list-group-item i.fa-ellipsis-v.topic {
+    margin-right: 20px;
+}
+
+.module-buttons {
+    width: 100%;
+}
+
+.right-buttons {
+    float: right
+}
+
+#select-one-action option {
+    text-align: right;
+}
