@@ -3,79 +3,73 @@
 
 <head>
   <title>Edit Screen</title>
+  <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/Kanbas/styles.css" />
+  <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Status/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Dashboard/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
   <link rel="stylesheet" href="/Kanbas/styles.css" />
   <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
   <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css" />
 </head>
 
 <body>
-  <table width="100%">
-    <tbody>
-      <tr>
-        <!-- {first column}-->
-        <td valign="top">
-          <div class="container wd-kanbas-sidebar">
+    <div class="d-flex">
+        <div class="d-none d-md-block">
             <ul class="wd-kanbas-navigation">
-              <li><a href="#"><img class="neu_logo" src="/images/neu_logo.png"></a></li>
-              <li><a href="/Kanbas/Account/Profile/screen.html">
-                  <div><i class="fa fa-user default_padding"></i></br>Account</div>
-                </a></li>
-              <li><a href="/Kanbas/Dashboard/screen.html"><i class="fa fa-tachometer default_padding"></i></br>Dashboard</a></li>
-              <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html"><i class="fa fa-book default_padding"></i></br>Courses</a>
-              </li>
-              <li><a href="#"><i class="fa fa-calendar default_padding"></i></br>Calendar</a></li>
-              <li><a href="#"><i class="fa fa-inbox default_padding"></i></br>Inbox</a></li>
-              <li><a href="#"><i class="fa fa-clock-o default_padding"></i></br>History</a></li>
-              <li><a href="#"><i class="fa fa-tv default_padding"></i></br>Studio</a></li>
-              <li><a href="#"><i class="fa fa-cloud default_padding"></i></br>Commons</a></li>
-              <li><a href="#"><i class="fa fa-question-circle default_padding"></i></br>Help</a></li>
+                <div class="d-flex stretch-body">
+                    <div>
+                        <ul class="wd-kanbas-navigation wd-kanbas-sidebar">
+                            <li><a href="#"><img class="neu_logo" src="/images/neu_logo.png"></a></li>
+                            <li><a href="/Kanbas/Account/Profile/screen.html">
+                                    <div><i class="fa fa-user default_padding"></i></br>Account</div>
+                                </a></li>
+                            <li><a href="/Kanbas/Dashboard/screen.html"><i
+                                        class="fa fa-tachometer default_padding"></i></br>Dashboard</a></li>
+                            <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html"><i
+                                        class="fa fa-book default_padding"></i></br>Courses</a></li>
+                            <li><a href="#"><i class="fa fa-calendar default_padding"></i></br>Calendar</a></li>
+                            <li><a href="#"><i class="fa fa-inbox default_padding"></i></br>Inbox</a></li>
+                            <li><a href="#"><i class="fa fa-clock-o default_padding"></i></br>History</a></li>
+                            <li><a href="#"><i class="fa fa-tv default_padding"></i></br>Studio</a></li>
+                            <li><a href="#"><i class="fa fa-cloud default_padding"></i></br>Commons</a></li>
+                            <li><a href="#"><i class="fa fa-question-circle default_padding"></i></br>Help</a></li>
+                        </ul>
+                    </div>
+                </div>
             </ul>
-          </div>
-        </td>
-        <!-- {second column}-->
-        <td valign="top">
-          <ul class="wd-navigation">
-            <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-            <li><a href="#">Modules</a></li>
-            <li><a href="#">Piazza</a></li>
-            <li><a href="#">Zoom Meetings</a></li>
-            <li class="wd-active"><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-            <li><a href="#">Quizzes</a></li>
-            <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-            <li><a href="#">People</a></li>
-            <li><a href="#">Panopto Video</a></li>
-            <li><a href="#">Discussions</a></li>
-            <li><a href="#">Announcements</a></li>
-            <li><a href="#">Pages</a></li>
-            <li><a href="#">Files</a></li>
-            <li><a href="#">Rubrics</a></li>
-            <li><a href="#">Outcomes</a></li>
-            <li><a href="#">Collaborations</a></li>
-            <li><a href="#">Syllabus</a></li>
-            <li><a href="#">Settings</a></li>
-        </ul>
-        </td>
-        <!-- {third column}-->
-        <td valign="top">
-          <table>
-            <tbody>
-              <select>
-                <option>SpeedGrader</option>
-                <option>Student</option>
-                <option>Instructor</option>
-                <option>Teaching Assistant</option>
-              </select>
-              <hr>
-              <label>
-                <h3><strong>Assignment Name</strong></h3>
-              </label><br />
-              <input type="text" name="assignment_name" value="A1 - ENV + HTML" /><br /><br />
-
-              <label>Assignment Description</label><br /><br />
-              <textarea name="wd-assignment-description" rows="4" cols="50">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsum laudantium veniam optio, dicta quas voluptas facilis alias laborum voluptatibus maiores ducimus dolorem molestiae labore, harum rerum? Quis, quam vitae!
-            </textarea><br /><br />
-              <table>
+        </div>
+        <div class="d-none d-md-block home-second">
+            <ul class="wd-navigation">
+                <li class="wd-active"><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+                <li><a href="#">Modules</a></li>
+                <li><a href="#">Piazza</a></li>
+                <li><a href="#">Zoom Meetings</a></li>
+                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                <li><a href="#">Quizzes</a></li>
+                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+                <li><a href="#">People</a></li>
+                <li><a href="#">Panopto Video</a></li>
+                <li><a href="#">Discussions</a></li>
+                <li><a href="#">Announcements</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Rubrics</a></li>
+                <li><a href="#">Outcomes</a></li>
+                <li><a href="#">Collaborations</a></li>
+                <li><a href="#">Syllabus</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </div>
+        <div class="flex-fill">
+            <div>
+            <table>
                 <tbody>
                   <tr>
                     <td><label>Points</label><br /><br /></td>
@@ -116,26 +110,20 @@
                       Assign to<br /><br />
                       <input type="text" value="Everyone" /><br /><br />
                       Due:<br /><br />
-                      <input type="date" name="due_date" min="2023-01-05" max="2023-01-23"
-                        value="2023-01-23" /><br /><br />
+                      <input type="date" name="due_date" min="2023-01-05" max="2023-01-23" value="2023-01-23" /><br /><br />
                       Available from:<br /><br />
-                      <input type="date" name="available_date" min="2023-01-01" max="2023-01-23"
-                        value="2023-01-23" /><br /><br />
+                      <input type="date" name="available_date" min="2023-01-01" max="2023-01-23" value="2023-01-23" /><br /><br />
                       Unitl:<br /><br />
-                      <input type="date" name="until_date" min="2023-01-05" max="2023-01-23"
-                        value="2023-01-23" /><br /><br />
+                      <input type="date" name="until_date" min="2023-01-05" max="2023-01-23" value="2023-01-23" /><br /><br />
                       <button>Cancel</button>
                       <button>Save</button>
                     </td>
                   </tr>
                 </tbody>
               </table>
-            </tbody>
-          </table>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

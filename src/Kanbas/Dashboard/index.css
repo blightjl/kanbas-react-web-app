@@ -1,0 +1,71 @@
+.wd-dashboard-anchor {
+    position: fixed;
+    background-color: white;
+    color: black;
+    height: 75px;
+    width: 91%;
+    top: 0;
+    left: 80px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 0x;
+    padding-bottom: 0x;
+    z-index: 2;
+}
+
+.wd-dashboard-subview {
+    padding-top: 85px;
+    padding-left: 20px;
+    padding-right: 35px;
+    color: black;
+    left: 0px;
+    width: 100%
+}
+
+.dashboard {
+    margin-left: 85px;
+}
+
+.wd-dashboard-line {
+    height: 1px;
+    background-color: black;
+    width: 100%;
+}
+
+.wd-dashboard-card {
+    width: 300px;
+    color: red;
+}
+
+.wd-card-details {
+    text-decoration: none;
+    color: navy;
+    font-weight: bold;
+}
+
+.card img.card-img-top {
+    max-height: 150px;
+  }
+
+.card-title.wd-card-details {
+    color: rgb(38, 100, 195);
+}
+
+.card-text {
+    color: gray;
+}
+
+/* .btn.btn-primary {
+    background-color: white;
+    border-color: white;
+} */
+
+.btn.btn-primary i.fa.fa-book{
+    color: rgb(38, 100, 195);
+    color: rgb(38, 100, 195);
+    font-size: 24px;
+}
+
+/* div.card-body {
+    text-align: center;
+} */

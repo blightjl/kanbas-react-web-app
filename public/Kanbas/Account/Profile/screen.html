@@ -1,8 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Account Profile Screen</title>
+    <!-- <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" /> -->
+    <link rel="stylesheet" href="/Kanbas/Courses/Status/index.css" />
+    <!-- <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" /> -->
+    <!-- <link rel="stylesheet" href="/Kanbas/styles.css" /> -->
+    <!-- <link rel="stylesheet" href="/Kanbas/Navigation/index.css" /> -->
+    <!-- <link rel="stylesheet" href="/Kanbas/Account/Profile/Edit/index.css" /> -->
+    <!-- <link rel="stylesheet" href="/Kanbas/Account/Profile/index.css" /> -->
+    
     <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Dashboard/index.css" />
+
+    <!-- <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="/Kanbas/styles.css" />
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
@@ -14,67 +31,67 @@
     <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
     <link rel="stylesheet" href="/Kanbas/styles.css" />
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
-  </head>
-  <body>
-    <table width="100%">
-        <tbody>
-          <tr>
-            <!-- {first column}-->
-            <td valign="top">
-                <div class="container wd-kanbas-sidebar">
-                    <ul class="wd-kanbas-navigation">
-                      <li><a href="#"><img class="neu_logo" src="/images/neu_logo.png"></a></li>
-                      <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html"><div><i class="fa fa-user default_padding"></i></br>Account</div></a></li>
-                      <li><a href="/Kanbas/Dashboard/screen.html"><i class="fa fa-tachometer default_padding"></i></br>Dashboard</a></li>
-                      <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fa fa-book default_padding"></i></br>Courses</a></li>
-                      <li><a href="#"><i class="fa fa-calendar default_padding"></i></br>Calendar</a></li>
-                      <li><a href="#"><i class="fa fa-inbox default_padding"></i></br>Inbox</a></li>
-                      <li><a href="#"><i class="fa fa-clock-o default_padding"></i></br>History</a></li>
-                      <li><a href="#"><i class="fa fa-tv default_padding"></i></br>Studio</a></li>
-                      <li><a href="#"><i class="fa fa-cloud default_padding"></i></br>Commons</a></li>
-                      <li><a href="#"><i class="fa fa-question-circle default_padding"></i></br>Help</a></li>
-                    </ul>
-                    </div>
-            </td>
-            <!-- {second column}-->
-            <td valign="top">
-                <ul class="wd-navigation">
-                    <li><a href="#">Notifications</a></li>
-                    <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
-                    <li><a href="#">Files</a></li>
-                    <li><a href="#">Settings</a></li>
-                    <li><a href="#">ePortolios</a></li>
-                    <li><a href="#">Shared Content</a></li>
-                    <li><a href="#">The Hub</a></li>
-                    <li><a href="#">Quickly Course Tools</a></li>
-                    <li><a href="#">Global Announcements</a></li>
+    <link rel="stylesheet" href="/Kanbas/Account/Profile/Edit/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Account/Profile/index.css" /> -->
+</head>
+
+<body>
+    <div class="d-flex stretch-body">
+        <div class="d-flex stretch-body">
+            <div>
+                <ul class="wd-kanbas-navigation">
+                    <li><a href="#"><img class="neu_logo" src="/images/neu_logo.png"></a></li>
+                    <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">
+                            <div><i class="fa fa-user default_padding"></i></br>Account</div>
+                        </a></li>
+                    <li><a href="/Kanbas/Dashboard/screen.html"><i
+                                class="fa fa-tachometer default_padding"></i></br>Dashboard</a></li>
+                    <li><a href="/Kanbas/Courses/Home/screen.html"><i
+                                class="fa fa-book default_padding"></i></br>Courses</a>
+                    </li>
+                    <li><a href="#"><i class="fa fa-calendar default_padding"></i></br>Calendar</a></li>
+                    <li><a href="#"><i class="fa fa-inbox default_padding"></i></br>Inbox</a></li>
+                    <li><a href="#"><i class="fa fa-clock-o default_padding"></i></br>History</a></li>
+                    <li><a href="#"><i class="fa fa-tv default_padding"></i></br>Studio</a></li>
+                    <li><a href="#"><i class="fa fa-cloud default_padding"></i></br>Commons</a></li>
+                    <li><a href="#"><i class="fa fa-question-circle default_padding"></i></br>Help</a></li>
                 </ul>
-            </td>
-            <!-- Profile Content{third column}-->
-            <td valign="top">
-                Josan Limbu's Profile<br/>
+            </div>
+        </div>
+        <div class="home-second">
+            <ul class="wd-navigation">
+                <li><a href="#">Notifications</a></li>
+                <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">ePortolios</a></li>
+                <li><a href="#">Shared Content</a></li>
+                <li><a href="#">The Hub</a></li>
+                <li><a href="#">Quickly Course Tools</a></li>
+                <li><a href="#">Global Announcements</a></li>
+            </ul>
+        </div>
+        <div>
+            <div class="profile-content">
+                Josan Limbu's Profile<br />
                 <hr>
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <h1>Josan Limbu</h1><br/><br/>
-                                <h2>Contact</h2><br/><br/>
-                                No registered services, you can add some on the <a href="#">settings</a> page.<br/><br/>
-                                <h2>Biography</h2><br/><br/>
-                                Hacker<br/><br/>
-                                <h2>Links</h2><br/><br/>
-                                <a href="#">Northeastern</a><br/><br/>
-                            </td>
-                            <td valign="top"><button onclick="location.href='/Kanbas/Account/Profile/Edit/screen.html'">Edit Profile</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-        </tbody>
-        </table>
-  </body>
+                <ul class="list-group">
+                    <button onclick="location.href='/Kanbas/Account/Profile/Edit/screen.html'"
+                        id="edit-profile-button">Edit
+                        Profile</button>
+                </ul>
+                <h1>Josan Limbu</h1>
+                </br>
+                <h2>Contact</h2>
+                </br>
+                <p>No registered services, you can add some on the <a href="#">settings</a> page.</p><br /><br />
+                <h2>Biography</h2><br /><br />
+                <span>Hacker</span><br />
+                <h2>Links</h2><br /><br />
+                <a href="#">Northeastern</a><br /><br />
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>

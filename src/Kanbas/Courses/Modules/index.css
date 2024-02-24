@@ -1,0 +1,15 @@
+.button-set {
+    width: 20%;
+}
+
+.addModule {
+    background-color: red;
+    color: white;
+}
+
+.studentView {
+    height: 30px;
+    width: 10%;
+    top: 10%;
+    left: 90%;
+}

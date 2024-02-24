@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>Account Profile Edit Screen</title>
     <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
@@ -14,83 +15,83 @@
     <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
     <link rel="stylesheet" href="/Kanbas/styles.css" />
     <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
-    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
-  </head>
-  <body>
-    <table>
-        <tbody>
-            <tr>
-                <!--{first column}-->
-                <td valign="top">
-                    <div class="container wd-kanbas-sidebar">
-                        <ul class="wd-kanbas-navigation">
-                          <li><a href="#"><img class="neu_logo" src="/images/neu_logo.png"></a></li>
-                          <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html"><div><i class="fa fa-user default_padding"></i></br>Account</div></a></li>
-                          <li><a href="/Kanbas/Dashboard/screen.html"><i class="fa fa-tachometer default_padding"></i></br>Dashboard</a></li>
-                          <li><a href="/Kanbas/Courses/Home/screen.html"><i class="fa fa-book default_padding"></i></br>Courses</a></li>
-                          <li><a href="#"><i class="fa fa-calendar default_padding"></i></br>Calendar</a></li>
-                          <li><a href="#"><i class="fa fa-inbox default_padding"></i></br>Inbox</a></li>
-                          <li><a href="#"><i class="fa fa-clock-o default_padding"></i></br>History</a></li>
-                          <li><a href="#"><i class="fa fa-tv default_padding"></i></br>Studio</a></li>
-                          <li><a href="#"><i class="fa fa-cloud default_padding"></i></br>Commons</a></li>
-                          <li><a href="#"><i class="fa fa-question-circle default_padding"></i></br>Help</a></li>
-                        </ul>
-                        </div>
-                </td>
-                <!--{second column}-->
-                <td valign="top">
-                    <ul class="wd-navigation">
-                        <li><a href="#">Notifications</a></li>
-                        <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
-                        <li><a href="#">Files</a></li>
-                        <li><a href="#">Settings</a></li>
-                        <li><a href="#">ePortolios</a></li>
-                        <li><a href="#">Shared Content</a></li>
-                        <li><a href="#">The Hub</a></li>
-                        <li><a href="#">Quickly Course Tools</a></li>
-                        <li><a href="#">Global Announcements</a></li>
+    <link rel="stylesheet" href="/Kanbas/Account/Profile/Edit/index.css" />
+</head>
+
+<body>
+    <div class="d-flex">
+        <div>
+            <ul class="wd-kanbas-navigation">
+                <li><a href="#"><img class="neu_logo" src="/images/neu_logo.png"></a></li>
+                <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">
+                        <div><i class="fa fa-user default_padding"></i></br>Account</div>
+                    </a></li>
+                <li><a href="/Kanbas/Dashboard/screen.html"><i
+                            class="fa fa-tachometer default_padding"></i></br>Dashboard</a></li>
+                <li><a href="/Kanbas/Courses/Home/screen.html"><i
+                            class="fa fa-book default_padding"></i></br>Courses</a>
+                </li>
+                <li><a href="#"><i class="fa fa-calendar default_padding"></i></br>Calendar</a></li>
+                <li><a href="#"><i class="fa fa-inbox default_padding"></i></br>Inbox</a></li>
+                <li><a href="#"><i class="fa fa-clock-o default_padding"></i></br>History</a></li>
+                <li><a href="#"><i class="fa fa-tv default_padding"></i></br>Studio</a></li>
+                <li><a href="#"><i class="fa fa-cloud default_padding"></i></br>Commons</a></li>
+                <li><a href="#"><i class="fa fa-question-circle default_padding"></i></br>Help</a></li>
+            </ul>
+        </div>
+        <div class="home-second">
+            <ul class="wd-navigation">
+                <li><a href="#">Notifications</a></li>
+                <li class="wd-active"><a href="/Kanbas/Account/Profile/screen.html">Profile</a></li>
+                <li><a href="#">Files</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">ePortolios</a></li>
+                <li><a href="#">Shared Content</a></li>
+                <li><a href="#">The Hub</a></li>
+                <li><a href="#">Quickly Course Tools</a></li>
+                <li><a href="#">Global Announcements</a></li>
+            </ul>
+        </div>
+        <div>
+            <h2>Josan Limbu</h2>
+            Name:<input placeholder="Full name" />
+            Pronouns:<select>
+                <option>None</option>
+                <option>he/his</option>
+                <option>she/her</option>
+                <option>they/their</option>
+                <option>other</option>
+            </select><br /><br />
+            Title:<input placeholder="Title"><br /><br />
+            <h3>Contact</h3>
+            No registered services, you can add some on the <a href="#">settings</a> page.<br /><br />
+            <h3>Biography</h3>
+            Hacker<br />
+            <textarea name="bio" rows="4" cols="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsum laudantium veniam optio, dicta quas voluptas facilis alias laborum voluptatibus maiores ducimus dolorem molestiae labore, harum rerum? Quis, quam vitae!
+                    </textarea><br /><br />
+            <h3>Links</h3>
+            <li><a href="">Northeastern</a></li><br />
+            <div>
+                <div>
+                    <ul class="list-group">
+                        <span class="float-end">
+                            <strong>Title</strong>
+                            <input placeholder="title" /> ->
+                            <strong>URL</strong>
+                            <input placeholder="url" /><a href="#">Remove</aa>
+                        </span>
                     </ul>
-                </td>
-                <!--{third column}-->
-                <td valign="top">
-                    <h2>Josan Limbu</h2>
-                    Name:<input placeholder="Full name"/>
-                    Pronouns:<select>
-                        <option>None</option>
-                        <option>he/his</option>
-                        <option>she/her</option>
-                        <option>they/their</option>
-                        <option>other</option>
-                    </select><br/><br/>
-                    Title:<input placeholder="Title"><br/><br/>
-                    <h3>Contact</h3>
-                    No registered services, you can add some on the <a href="#">settings</a> page.<br/><br/>
-                    <h3>Biography</h3>
-                    Hacker<br/>
-                    <textarea name="bio" rows="4" cols="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsum laudantium veniam optio, dicta quas voluptas facilis alias laborum voluptatibus maiores ducimus dolorem molestiae labore, harum rerum? Quis, quam vitae!
-                    </textarea><br/><br/>
-                    <h3>Links</h3>
-                    <li><a href="">Northeastern</a></li><br/>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td valign="top">
-                                    <strong>Title</strong><br/>
-                                    <input placeholder="title"/> -><br/>
-                                    <button>Add another link</button><br/>
-                                    <button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Cancel</button><button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Save Profile</button><br/>
-                                    <button onclick="location.href='/Kanbas/Account/Profile/Edit/screen.html'">Edit Profile</button><button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Cancel Editing</button>
-                                </td>
-                                <td valign="top">
-                                    <strong>URL</strong><br/>
-                                    <input placeholder="url"/><a href="#">Remove</aa><br/>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-  </body>
-  </html>
+                    <button>Add another link</button><br />
+                    <button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Cancel</button><button
+                        onclick="location.href='/Kanbas/Account/Profile/screen.html'">Save
+                        Profile</button><br />
+                    <button onclick="location.href='/Kanbas/Account/Profile/Edit/screen.html'">Edit
+                        Profile</button><button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Cancel
+                        Editing</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+html,
+body {
+    width: 100%;
+}
+
+.stretch-body {
+    width: 500px;
+}
+
+.profile-content {
+    width: 500px;
+}
+
+#edit-profile-button {
+    position: relative;
+    right: -350px;
+    width: 80px;
+    font-size: 13px;
+}

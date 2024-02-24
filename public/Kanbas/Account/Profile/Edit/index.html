@@ -4,40 +4,44 @@
     <title>Account Profile Edit Index</title>
   </head>
   <body>
-    <h2>Josan Limbu</h2>
-    Name:<input placeholder="Full name"/>
-    Pronouns:<select>
-        <option>None</option>
-        <option>he/his</option>
-        <option>she/her</option>
-        <option>they/their</option>
-        <option>other</option>
-    </select><br/><br/>
-    Title:<input placeholder="Title"><br/><br/>
-    <h3>Contact</h3>
-    No registered services, you can add some on the <a href="#">settings</a> page.<br/><br/>
-    <h3>Biography</h3>
-    Hacker<br/>
-    <textarea name="bio" rows="4" cols="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsum laudantium veniam optio, dicta quas voluptas facilis alias laborum voluptatibus maiores ducimus dolorem molestiae labore, harum rerum? Quis, quam vitae!
-    </textarea><br/><br/>
-    <h3>Links</h3>
-    <li><a href="">Northeastern</a></li><br/>
-    <table>
-        <tbody>
-            <tr>
-                <td valign="top">
-                    <strong>Title</strong><br/>
-                    <input placeholder="title"/> -><br/>
-                    <button>Add another link</button><br/>
-                    <button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Cancel</button><button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Save Profile</button><br/>
-                    <button onclick="location.href='/Kanbas/Account/Profile/Edit/screen.html'">Edit Profile</button><button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Cancel Editing</button>
-                </td>
-                <td valign="top">
-                    <strong>URL</strong><br/>
-                    <input placeholder="url"/><a href="#">Remove</aa><br/>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <div>
+      <h2>Josan Limbu</h2>
+      Name:<input placeholder="Full name" />
+      Pronouns:<select>
+          <option>None</option>
+          <option>he/his</option>
+          <option>she/her</option>
+          <option>they/their</option>
+          <option>other</option>
+      </select><br /><br />
+      Title:<input placeholder="Title"><br /><br />
+      <h3>Contact</h3>
+      No registered services, you can add some on the <a href="#">settings</a> page.<br /><br />
+      <h3>Biography</h3>
+      Hacker<br />
+      <textarea name="bio" rows="4" cols="50">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ipsum laudantium veniam optio, dicta quas voluptas facilis alias laborum voluptatibus maiores ducimus dolorem molestiae labore, harum rerum? Quis, quam vitae!
+              </textarea><br /><br />
+      <h3>Links</h3>
+      <li><a href="">Northeastern</a></li><br />
+      <div>
+          <div>
+              <ul class="list-group">
+                  <span class="float-end">
+                      <strong>Title</strong>
+                      <input placeholder="title" /> ->
+                      <strong>URL</strong>
+                      <input placeholder="url" /><a href="#">Remove</aa>
+                  </span>
+              </ul>
+              <button>Add another link</button><br />
+              <button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Cancel</button><button
+                  onclick="location.href='/Kanbas/Account/Profile/screen.html'">Save
+                  Profile</button><br />
+              <button onclick="location.href='/Kanbas/Account/Profile/Edit/screen.html'">Edit
+                  Profile</button><button onclick="location.href='/Kanbas/Account/Profile/screen.html'">Cancel
+                  Editing</button>
+          </div>
+      </div>
+  </div>
   </body>
 </html>

@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Account Profile Index</title>
-  </head>
-  <body>
-    Josan Limbu's Profile<br/>
-    <hr>
-    <table>
-        <tbody>
-            <tr>
-                <td>
-                    <h1>Josan Limbu</h1><br/><br/>
-                    <h2>Contact</h2><br/><br/>
-                    No registered services, you can add some on the <a href="#">settings</a> page.<br/><br/>
-                    <h2>Biography</h2><br/><br/>
-                    Hacker<br/><br/>
-                    <h2>Links</h2><br/><br/>
-                    <a href="#">Northeastern</a><br/><br/>
-                </td>
-                <td valign="top"><button onclick="location.href='/Kanbas/Account/Profile/Edit/screen.html'">Edit Profile</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-  </body>
+
+<head>
+  <title>Account Profile Index</title>
+  <link rel="stylesheet" href="/Kanbas/Account/Profile/index.css" />
+</head>
+
+<body>
+  <div class="profile-content">
+      Josan Limbu's Profile<br />
+      <hr>
+      <ul class="list-group">
+        <button onclick="location.href='/Kanbas/Account/Profile/Edit/screen.html'" id="edit-profile-button">Edit
+          Profile</button>
+      </ul>
+      <h1>Josan Limbu</h1>
+    </br>
+    <h2>Contact</h2>
+  </br>
+  <p>No registered services, you can add some on the <a href="#">settings</a> page.</p><br/><br/>
+  <h2>Biography</h2><br/><br/>
+  <span>Hacker</span><br/>
+  <h2>Links</h2><br/><br/>
+  <a href="#">Northeastern</a><br/><br/>
+  </div>
+</body>
+
 </html>

@@ -1,0 +1,28 @@
+.title-bar {
+    padding-left: 100px;
+    padding-top: 10px;
+    color: red;
+    z-index: 2;
+}
+
+.title-line {
+    padding-top: 205px;
+}
+
+.currPath {
+    color: black;
+}
+
+.arrowSign {
+    color: gray;
+}
+
+.pathAnchor {
+    top: "200px";
+    left: "120px";
+}
+
+/* .moduleCol {
+    padding-left: 100px;
+    padding-top: 70px;
+} */
