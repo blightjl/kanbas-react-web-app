@@ -6,8 +6,8 @@ const initialState = {
     module: { name: "New Module 123", description: "New Description" },
     selectedModule: {
         _id: "Course ID",
-        name: "Course Name",
-        description: "Course Description",
+        name: "Module Name",
+        description: "Module Description",
         course: "Course",
         lessons: [
             {
@@ -20,8 +20,8 @@ const initialState = {
       },
     displayMod:         {
         _id: "Course ID",
-        name: "Course Name",
-        description: "Course Description",
+        name: "Module Name",
+        description: "Module Description",
         course: "Course",
         lessons: [
             {
@@ -32,6 +32,11 @@ const initialState = {
             },
         ]
       }, 
+      moduleForm: {
+        name: "Module Name",
+        description: "Module Description",
+        course: "Course",
+    },
   };
   
   const modulesSlice = createSlice({
@@ -40,39 +45,74 @@ const initialState = {
     reducers: {
 
     setForm: (state, action) => {
-        state.module = action.payload;
+        state.moduleForm = action.payload;
     },
 
     setModule: (state, action) => {
         state.module = action.payload;
     },
 
-    setModuleList: (state, action) => {
-        state.modules = action.payload;
+    setSelectedModule: (state, action) => {
+        state.selectedModule = action.payload;
+    },
+
+    setDisplay: (state, action) => {
+        state.displayMod = action.payload;
     },
 
     addModule: (state, action) => {
-        state.modules = [
-            { ...action.payload, _id: new Date().getTime().toString() },
-            ...state.modules,
-        ];
+        console.log("ADDED");
+        console.log(action.payload);
+        const { name, description, course } = action.payload;
+        console.log(name, description, course);
+        const newModule = {
+            _id: new Date().getTime().toString(),
+            name: name,
+            description: description,
+            course: course,
+            lessons: [],
+        };
+        console.log(state.modules.length);
+        state.modules = [...state.modules, {...newModule}];
+        console.log(state.modules.length);
     },
 
     deleteModule: (state, action) => {
-        state.modules = state.modules.filter((module) => module._id !== action.payload);
+        console.log("DELETING");
+        console.log(action.payload);
+        console.log(state.modules);
+        state.modules = state.modules.filter((module) => module._id !== action.payload._id);
+        console.log(state.modules);
     },
 
     updateModule: (state, action) => {
-        state.modules = state.modules.map((m) => (m._id === action.payload._id ? action.payload : m));
+        state.modules = state.modules.map((m) => (m._id === action.payload._id ? {...action.payload, name: state.moduleForm.name, description: state.moduleForm.description} : m));
+        state.selectedModule = {
+            _id: "Course ID",
+            name: "Module Name",
+            description: "Module Description",
+            course: "Course",
+            lessons: [
+                {
+                _id: "Lesson ID",
+                name: "Lesson Name",
+                description: "Lesson Description",
+                module: "Lesson Number"
+                },
+            ]
+        }
+        state.moduleForm = {
+            name: "",
+            description: "",
+            course: "",
+        }
     },
-
-
     },
   });
   
   
-  export const { addModule, deleteModule,
-    updateModule, setModule } = modulesSlice.actions;
+  export const { setForm, setModule, setSelectedModule, setDisplay, addModule, deleteModule,
+    updateModule } = modulesSlice.actions;
 
   export default modulesSlice.reducer;
   

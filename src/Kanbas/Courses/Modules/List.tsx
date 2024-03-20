@@ -3,133 +3,65 @@ import "./index.css";
 import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 import { useParams } from "react-router";
-import { stringify } from "querystring";
-
+import { useSelector, useDispatch } from "react-redux";
+import {
+    setForm,
+    setModule,
+    setSelectedModule,
+    setDisplay,
+    addModule,
+    deleteModule,
+    updateModule,
+} from "./reducer";
+import { KanbasState } from "../../store";
 
 function ModuleList() {
     const { courseId } = useParams();
-    const [modulesList, setModuleList] = useState<any[]>(modules);
-    const [selectedModule, setSelectedModule] = useState(
-        {
-            _id: "Course ID",
-            name: "Course Name",
-            description: "Course Description",
-            course: "Course",
-            lessons: [
-                {
-                _id: "Lesson ID",
-                name: "Lesson Name",
-                description: "Lesson Description",
-                module: "Lesson Number"
-                },
-            ]
-          }
-    );
-    const [moduleForm, setForm] = useState({
-        name: "",
-        description: "",
-        course: courseId,
-    }
-    );
-    const [displayMod, setDisplay] = useState(
-        {
-            _id: "Course ID",
-            name: "Course Name",
-            description: "Course Description",
-            course: "Course",
-            lessons: [
-                {
-                _id: "Lesson ID",
-                name: "Lesson Name",
-                description: "Lesson Description",
-                module: "Lesson Number"
-                },
-            ]
-          }
-        );
 
-    const handleInputs = (e : any) => {
-        const { name, value} = e.target;
-        setForm(prevState => {
-          return {...prevState, [name] : value}
-        });
-      };
+    const moduleList = useSelector((state: KanbasState) => 
+        state.modulesReducer.modules);
 
-    const addModule = () => {
-        const newModule =         {
-            _id: "",
-            name: moduleForm.name,
-            description: moduleForm.description,
-            course: "",
-            lessons: []
-          };
-        const anotherMod = {...newModule, course: courseId, _id: new Date().getTime().toString()};
-        setModuleList(prevState => {
-            return [...prevState, {...anotherMod}]
-        });
-      };
+    const selectedModule = useSelector((state: KanbasState) => 
+        state.modulesReducer.selectedModule);
 
-    const deleteModule = (moduleId: string) => {
-        const newList = modulesList.filter((module) => module._id !== moduleId);
-        setModuleList(newList);
-    };
+    const moduleForm = useSelector((state: KanbasState) => 
+        state.modulesReducer.moduleForm);
 
-    const updateModule = (module: any) => {
-        const newModuleList = modulesList.map((m) => (m._id === module._id ? {...module, name: moduleForm.name, description: moduleForm.description} : m)
-        );
-        setModuleList(newModuleList);
-        setSelectedModule(        {
-            _id: "Course ID",
-            name: "Course Name",
-            description: "Course Description",
-            course: "Course",
-            lessons: [
-                {
-                _id: "Lesson ID",
-                name: "Lesson Name",
-                description: "Lesson Description",
-                module: "Lesson Number"
-                },
-            ]
-          });
-          setForm(prevState => { 
-            return {...prevState,
-                name: "",
-                description: "",
-                course: "",
-            }});
-      };
-    
+    const displayMod = useSelector((state: KanbasState) => 
+        state.modulesReducer.displayMod);
 
-    const submitModule = (e: any) => {
-        e.preventDefault();
-        addModule();
-    };
-    
-
-    useEffect(() => {
-        console.log("MODULE FORM");
-        console.log(moduleForm);
-      }, [moduleForm]);
-
-    useEffect(() => {
-    console.log("SELECTED MODULE");
-    console.log(selectedModule);
-    }, [selectedModule]);
+    const dispatch = useDispatch();
 
     return (
         <div>
             <button className="split-button studentView">Student View</button>
-
-        <form className="form-control" onSubmit={submitModule}>
-        <input name="course" placeholder={selectedModule.course} type="text" className="form-control" 
-                            onChange={handleInputs}/>
-            <input name="name" placeholder="Module Name" type="text" className="form-control" 
-                            onChange={handleInputs}/>
-            <textarea name="description" className="form-control" placeholder="Module Description"
-                            onChange={handleInputs}/>
+        
+        <form className="form-control" onSubmit={(event) => {event.preventDefault(); dispatch(addModule({...moduleForm, course: courseId}));}}>
+        <input name="course" placeholder={selectedModule.course} type="text" className="form-control"
+                            onChange={(e) => {dispatch(setForm({...moduleForm, course: e.target.value})); console.log(moduleForm);}}/>
+            <input name="name" placeholder={selectedModule.name} type="text" className="form-control" 
+                            onChange={(e) => {dispatch(setForm({...moduleForm, name: e.target.value})); console.log(moduleForm);}}/>
+            <textarea name="description" placeholder={selectedModule.description} className="form-control"
+                            onChange={(e) => {dispatch(setForm({...moduleForm, description: e.target.value})); console.log(moduleForm);}}/>
             <button className="btn btn-danger form-control add-module" type="submit" style={{width: '100px'}}> ADD </button>
-            <button className="btn btn-success form-control update-module" type="button" style={{width: '100px'}} onClick={() => updateModule(selectedModule)}> UPDATE</button>
+            <button className="btn btn-success form-control update-module" type="button" style={{width: '100px'}} onClick={() => {dispatch(updateModule(selectedModule)); dispatch(setSelectedModule({
+        _id: "Course ID",
+        name: "Course Name",
+        description: "Course Description",
+        course: "Course",
+        lessons: [
+            {
+            _id: "Lesson ID",
+            name: "Lesson Name",
+            description: "Lesson Description",
+            module: "Lesson Number"
+            },
+        ]
+      })); dispatch(setForm({
+        name: "",
+        description: "",
+        course: "",
+    }))}}> UPDATE</button>
         </form>
             <ul className="list-group wd-modules">
             <div className="button-set">
@@ -143,14 +75,14 @@ function ModuleList() {
                 </div>
                 <br/>
             </div>
-                {modulesList.filter((module) => module.course === courseId).map((module, index) => (
+                {moduleList.filter((module) => module.course === courseId).map((module, index) => (
                     <li key={index}
                         className="list-group-item">
                         <div>
-                            <button className="mod-button-style" onClick={() => {console.log("DISPLAY UPDATE"); setDisplay(module);}}>{module.name}</button>
+                            <button className="mod-button-style" onClick={() => {console.log("DISPLAY UPDATE"); dispatch(setDisplay(module));}}>{module.name}</button>
                             <span className="float-end">
-                                <button className="mod-button-style" onClick={() => deleteModule(module._id)}><FaMinusCircle /></button>
-                                <button className="mod-button-style" onClick={(event) => {event.preventDefault(); setSelectedModule(module); console.log(module);}}><FaEllipsisV /></button>
+                                <button className="mod-button-style" onClick={() => {dispatch(deleteModule(module)); console.log("DELETE");}}><FaMinusCircle /></button>
+                                <button className="mod-button-style" onClick={(event) => {event.preventDefault(); dispatch(setSelectedModule(module)); console.log(module);}}><FaEllipsisV /></button>
                             </span>
                         </div>
                         {displayMod._id === module._id && (
