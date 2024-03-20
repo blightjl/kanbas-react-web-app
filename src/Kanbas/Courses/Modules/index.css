@@ -13,3 +13,21 @@
     top: 10%;
     left: 90%;
 }
+
+.add-module {
+}
+
+.update-module {
+    margin-left: 10px;
+}
+
+.mod-button-style {
+    z-index: 10;
+    background-color: none;
+    border: none;
+}
+
+.sub-mod-button-style {
+    z-index: 10;
+    border: none;
+}

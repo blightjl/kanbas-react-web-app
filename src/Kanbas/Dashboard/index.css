@@ -66,6 +66,35 @@
     font-size: 24px;
 }
 
+.delete-button {
+    transform: scale(0.8);
+    right: 5%;
+    position: absolute;
+}
+
+.edit-button {
+    transform: scale(0.8);
+    left: 35%;
+    position: absolute;
+}
+
+.add-button {
+    transform: scale(0.8);
+    width: 30%;
+    /* position: absolute; */
+}
+
+.update-button {
+    transform: scale(0.8);
+    width: 30%;
+    /* position: absolute; */
+}
+
+.editor-board {
+    width: 400px;
+    height: 250px;
+}
+
 /* div.card-body {
     text-align: center;
 } */

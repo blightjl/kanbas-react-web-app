@@ -11,7 +11,7 @@ import { HiMiniBars3 } from "react-icons/hi2";
 import "../../libs/font-awesome/css/font-awesome.min.css"
 import "./index.css"
 
-function Courses() {
+function Courses({ courses }: {courses: any[]}) {
     const { courseId } = useParams();
     const location = useLocation();
     console.log(location);
